@@ -11,16 +11,20 @@
     let fem = [];
     let mas = [];
     //PROCESSAMENTO
-    for(let item of listaDeNomes){
+    for (let item of listaDeNomes) {
         const genero = prompt(`O nome ${item} é Masculino (M) ou Feminino (F)`).toUpperCase();
 
-        genero == "M" ? mas.push(item) : 
+        genero == "M" ? mas.push(item) :
         genero == "F" ? fem.push(item) :
         null;
     }
-    
-    //SAÍDA
-    document.write(`Nomes Femininos: ${fem}`);
-    document.write(`Nomes Masculinos: ${mas}`);
 
+    for (let masculino of mas) {
+        document.write(`<li>Nomes Masculinos: ${masculino}</li>`);
+    }
+    for (let feminino of fem) {
+        document.write(` <li>Nomes Femininos: ${feminino}</li>`);
+    }
+
+    //SAÍDA
 </script>
