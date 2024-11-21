@@ -7,23 +7,14 @@
 
     //ENTRADA
     let listaDeNumeros = [1, 4, 6, 8, 898, 7, 43, 2980, 3500, 10];
-    
+    let numerosPares = [];
+
     //PROCESSAMENTO
-    for (let par of listaDeNumeros){
-
-      let conta = ( par % 2 ) === 0;
-
-      if (conta == true) {
-        document.write(`O seu número é par `);
- 
-      } else {
-        document.write(`O seu número é impar`);
-      }
-
-
-     }
-
+    for (let numero of listaDeNumeros) {
+        if (numero % 2 === 0) {
+            numerosPares.push(numero);
+        }
+    }
     //SAÍDA
-     
-
+    document.write("Números pares:", numerosPares.sort((a,b) => a - b));
 </script>
